@@ -1,0 +1,88 @@
+2026-10-02  Matevz Tadel  <matevz.tadel@ijs.si>
+
+	* *.C:
+	Ported the macros to namespace gled.  They include sun.C, eye.C and
+	alienviz_common_foos.C instead of loading them at run time, load the
+	lib-sets with #pragma cling load and have using namespace gled.
+	Removed the forward declarations of gled classes.  Passed
+	ZRnrModBase::O_Off and O_On instead of 0 and 1 to the operation
+	setters.
+
+	* alienviz_common_foos.C:
+	* solar_suck.C:
+	Declared init_texture() and make_overlay() before their use.
+
+	* fake_replay.C:
+	Called ScreenDumper::SetWaitSignal(), the current name of
+	SetWaitDump().
+
+	* replay.C:
+	Used aev_textures, the current name of the texture list.
+
+2011-03-06  Matevz Tadel  <matevz.tadel@ijs.si>
+
+	* solar_suck.C:
+	Follow-up on changes in OdeCrawler.
+	Clarify instructions for connecting to ML service.
+
+	* alienviz_common_foos.C:
+	* suck.C:
+	* test.C:
+	Maintenace and some cosmetic changes.
+
+2008-10-13  Matevz Tadel  <matevz.tadel@ijs.si>
+
+	* alienviz_common_foos.C:
+	Rename "AliEnViz Shell" object to "AEVShell" - for consistency
+	with other objects.
+
+	* solar_suck.C:
+	Add overlay text-info objects.
+	Change defaults: double solar-system time factor, show planet
+	tails.
+	Keep elements sorted in AEVQueen.
+
+	* suck.C:
+	Add eg-commands for running in local mode.
+	Increase speed of texture animation.
+
+2008-10-03  Matevz Tadel  <matevz.tadel@ijs.si>
+
+	* alienviz_common_foos.C:
+	Add new nest layout Sites-Small.
+
+	* solar_suck.C:
+	Put in commands for use of new features:
+	- desired radius of planets;
+	- hostname/port of the data-dumper host.
+
+	Add overlay button for invoking SolarSystem class-view.
+
+2008-10-02  Matevz Tadel  <matevz.tadel@ijs.si>
+
+	* solar_suck.C:
+	New macro - run ml sucker with the Var1::SolarSystem, controlled
+	by AEVManager class.
+
+	* alienviz_common_foos.C:
+	Increase name-tile transparency.
+
+2008-09-29  Matevz Tadel  <matevz.tadel@ijs.si>
+
+	* alienviz_common_foos.C:
+	Do not draw lamp.
+	Fix default camera position slightly.
+
+	* suck.C:
+	Add an Eventor and TimeMaker.
+	Add old Gled avatar featuring as 'Central Services'.
+
+2008-09-29  Matevz Tadel  <matevz.tadel@ijs.si>
+
+	* ChangeLog:
+	New file.
+
+	* alienviz_common_foos.C:
+	* fake_replay.C:
+	* suck.C:
+	Move much of the common initialization into common-foos.

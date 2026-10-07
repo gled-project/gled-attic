@@ -1,0 +1,86 @@
+2026-10-02  Matevz Tadel  <matevz.tadel@ijs.si>
+
+	* *.C:
+	Ported the macros to namespace gled.  They include the setup macros
+	(sun.C, sun_demos.C, eye.C) instead of loading them at run time, load
+	the lib-sets with #pragma cling load and have using namespace gled.
+	Removed the forward declarations of gled classes.
+
+	* EvDisp.root:
+	* alice_simple.C:
+	* alice_geom.C:
+	Removed EvDisp.root.  It held the selection of detector volumes in the
+	old ZGlass layout, which the current classes cannot read.  alice_simple.C
+	now imports the volumes of the geometry directly, three levels deep.
+	alice_geom.C saves and loads its test node with geoview.root.
+
+	* alice_geom.C:
+	* alice_simple.C:
+	Declared the helper functions before their use.
+
+	* common_foos.C:
+	Included gled_globals.C and loaded Geom1 and RootGeo.  Made the string
+	variables const.  Passed ZRnrModBase::O_On instead of 1 to the
+	operation setters.
+
+2005-06-08  Matevz Tadel  <matevz.tadel@ijs.si>
+
+	* alice_geom.C:
+	* alice_simple.C:
+	* check_overlaps.C:
+	* common_foos.C:
+	Updated to new startup macro conventions.
+
+2005-04-18  Matevz Tadel  <matevz.tadel@ijs.si>
+
+	* alice_geom.C:
+	* alice_simple.C:
+	* check_overlaps.C:
+	* common_foos.C:
+	Start-up modularization. Copied the whole lot to demos/Alice where
+	it more properly belongs. This will remain here until a simpler
+	example is prepared to demonstrate the usage of RootGeo.
+
+2005-04-12  Matevz Tadel  <matevz.tadel@ijs.si>
+
+	* common_foos.C:
+	Unknown: part II.
+
+2005-04-12  Matevz Tadel  <matevz.tadel@ijs.si>
+
+	* alice_simple.C:
+	* simple_geo.root:
+	Unknown.
+
+2005-04-08  Matevz Tadel  <matevz.tadel@ijs.si>
+
+	* common_foos.C:
+	Use new registration of nest-layouts.
+
+2005-03-23  Matevz Tadel  <matevz.tadel@ijs.si>
+
+	* common_foos.C:
+	Added camera bases and infos to the scene; spawn gui-pupil instead
+	of raw pupil in default gui.
+
+	* alice_geom.C:
+	Added ZGeoRepacker to the scene; some minor fixes.
+
+	* alice_simple.C:
+	New file: scene with a simplified ALICE geometry for event
+	visualization.
+
+	* simple_geo.root:
+	New file: simplified alice geometry.
+
+	* EvDisp.root:
+	New file: gled-view of a simple geometry.
+
+2005-03-15  Matevz Tadel  <matevz.tadel@ijs.si>
+
+	* common_foos.C:
+	Added function spawn_default_gui.
+
+	* alice_geom.C:
+	* check_overlaps.C:
+	Use spawn_default_gui function.

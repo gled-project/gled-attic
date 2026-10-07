@@ -1,0 +1,24 @@
+2026-10-05  Matevz Tadel  <matevz.tadel@ijs.si>
+
+	* Glasses/TA_TextureContainer.cxx:
+	Put each statement at the start of _TA_Texture::Load() on its own
+	line.  This silenced a misleading-indentation warning.
+
+2026-10-02  Matevz Tadel  <matevz.tadel@ijs.si>
+
+	* Glasses/*.h:
+	* Glasses/*.cxx:
+	* Rnr/GL/*.h:
+	* Rnr/GL/*.cxx:
+	Moved all classes into namespace gled.  The forward declaration of
+	o3dInfo, which TA_SubUnit.cxx defines at global scope, stays outside of
+	it.  Removed the ClassImp lines.  Qualified the standard library names
+	with std::.  Replaced hash_map with std::unordered_map.
+
+	* Glasses/TA_TextureContainer.h:
+	Moved the include of GL/glew.h out of the namespace.
+
+	* Glasses/TA_SubUnit.cxx:
+	Declared the fields of the 3do file structures as int32_t instead of
+	long.  The file format has 32 bit fields, and long is 64 bit on x86_64,
+	so reading a unit crashed.

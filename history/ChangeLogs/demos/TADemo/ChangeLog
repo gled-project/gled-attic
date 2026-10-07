@@ -1,0 +1,7 @@
+2026-10-02  Matevz Tadel  <matevz.tadel@ijs.si>
+
+	* ta_init.C:
+	New demo with two Total Annihilation units on a base plane, after the
+	2003 macro libsets/TADemo/macros/ta_init.C that was never committed.
+	The unit models and textures are game data and are not in the
+	repository; the data directory is given as argument or in TA_DATA.

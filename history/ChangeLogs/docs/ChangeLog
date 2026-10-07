@@ -1,0 +1,115 @@
+2026-10-03  Matevz Tadel  <matevz.tadel@ijs.si>
+
+	Converted the pod documents to GitHub markdown and moved them from
+	pod/ and papers/greed-design-docs/ into docs/.  The pod files used
+	extensions of pod3, a private Pod::POM fork that no longer runs on
+	current Perl.
+
+	* gledarch.md, gledimp.md:
+	Moved from pod/gledarch.pod and pod/gledimp.pod.
+	Updated the gled --help listing in gledimp.md to the current output,
+	which adds --root-web, --pidfile and --logflush.  Noted that --daemon is
+	only listed by saturn --help.
+
+	* gled-dev.md, greed-databases.md, greed-sounds.md,
+	greed-tech-workplan.md, greedworld-gled-object-spaces.md,
+	greedworld-prototype-tasks.md:
+	Moved from papers/greed-design-docs/.
+	Replaced the LaTeX macros \greed, \gled, \greedhome and the like with
+	the plain names.
+
+	Rewrote the pod3 lists (=over enum, list and def, =item<term>) as
+	numbered lists, bullet lists, and bullets that open with the term in
+	bold.  Fixed an =item*, a \item and a =head2<...> that pod3 accepted.
+	Removed the svn:keywords property, as the $Id$ lines were not carried
+	over.
+
+	* ChangeLog:
+	Moved from pod/ChangeLog.  Merged in the one entry of
+	papers/greed-design-docs/ChangeLog.
+
+	* Makefile:
+	Moved from pod/Makefile.  Replaced the pod3 rules for html, pdf and ps
+	with a pandoc rule for html.  Removed the publish target, which copied
+	the html to www.gled.org.
+
+2026-10-02  Matevz Tadel  <matevz.tadel@ijs.si>
+
+	* gledimp.pod:
+	Described gled-create libset|glass|stone|rnr in place of the four
+	gled-create-<what> scripts.  'gled-create libset' creates the symlink
+	that configure needs, and 'gled-create glass' and 'gled-create rnr'
+	maintain glass.list.
+	Described the per-directory dictionaries: rootcling in place of
+	rootcint, and the classes other than glasses listed in <Dir>/LinkDef.h.
+	Described what make does without configure: it picks up new glasses
+	from glass.list, and runs project7 on headers that include their own
+	.h7.  Removed the class catalogues, build_libsets, make pre_depend and
+	make_p7.inc, which no longer exist.
+	Stated that all classes are in namespace gled, that ZGlass is not a
+	TObject, and that stones need a ClassDef and a LinkDef.h entry instead
+	of a TObject base.
+	Removed the link to the html class documentation, which was made with
+	THtml.  Named cling as the interpreter in place of CINT, except for the
+	'Export to CINT' menu entry, which keeps that name.
+
+2011-11-03  Matevz Tadel  <matevz.tadel@ijs.si>
+
+	* gledimp.pod:
+	Fix docs of L{a} pragma (return type was wrong).
+
+2009-12-14  Matevz Tadel  <matevz.tadel@ijs.si>
+
+	* gled-dev.pod:
+	Small updates: OSX build, DevIL.
+
+	* greedworld-prototype-tasks.pod:
+	Describe briefely C<Spiritio> classes under L<Unit movement on
+	terrain>.
+
+	* ChangeLog:
+	New file.
+
+2009-11-10  Matevz Tadel  <matevz.tadel@ijs.si>
+
+	* gledimp.pod:
+	Document L{fF} pragma.
+
+2009-10-12  Matevz Tadel  <matevz.tadel@ijs.si>
+
+	Improve and update project7 directive documentation.
+
+	* gledimp.pod:
+	Move p7 directive docs into separate section (now the last one).
+
+	Document the new X{dDfF} pragmas for data member - Delta foos.
+	Document the new X{qQ} pragma - set by ref.
+
+	Clarify that '//!' also makes data-member Set functions local.
+
+	Separate description of pragmas for data and function members.
+
+2009-07-05  Matevz Tadel  <matevz.tadel@ijs.si>
+
+	* gledimp.pod:
+	Document '!' syntax for local MIR execution in X{E}.
+
+2009-06-22  Matevz Tadel  <matevz.tadel@ijs.si>
+
+	* gledimp.pod:
+	Document that CMake is also needed (used by latest OpenAL).
+
+2009-04-14  Matevz Tadel  <matevz.tadel@ijs.si>
+
+	Improve descriptions of link pragma and RnrBits infrastructure.
+
+	* gledimp.pod:
+	Document difference between L{A} and L{a} link-pragmas.
+
+	Explain RnrBits in some more detail. Fix the Board example - it
+	was outdated and wrong.
+
+	Beautify some links to Gled web.
+
+	* ChangeLog:
+	New file.

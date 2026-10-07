@@ -1,0 +1,15 @@
+You're welcome!  I hope it works for you.
+
+		-Brad
+
+On Tue, Jun 14, 2005 at 05:20:22PM +0200, Matevz Tadel wrote:
+> Hi,
+>
+> my name is Matevz Tadel. I'm working on a data-analysis and visualization 
+> framework called Gled (<http://www.gled.org/>) and I've recently included 
+> ACTC code in the distribution.
+>
+> Thanks a lot for sharing it!
+>
+> Best regards,
+> Matevz

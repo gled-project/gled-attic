@@ -1,0 +1,19 @@
+2026-10-03  Matevz Tadel  <matevz.tadel@ijs.si>
+
+	Ported the Numerica demos to namespace gled.  They failed in cling
+	with "use of undeclared identifier 'Gled'".
+
+	* moonraker.C:
+	* spheror.C:
+	Made the unnamed macros functions named after their files.  Included
+	sun_demos.C and eye.C instead of loading them at run time, loaded the
+	libsets with #pragma cling load and added the using-directive.  Called
+	eye() in place of Gled::Macro("eye.C").
+
+2011-03-06  Matevz Tadel  <matevz.tadel@ijs.si>
+
+	* moonraker.C:
+	Follow-up on changes in OdeCrawler.
+
+	* ChangeLog:
+	New file.
