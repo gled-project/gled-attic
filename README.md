@@ -10,6 +10,8 @@ longer developed.
 | `docs/gled-dev.md` | *Somewhat urgent Gled developments*, a list of planned work from 2008 and 2009 |
 | `docs/gledparadigms.md` | *Gled System / Paradigms*, an introduction to the concepts and terminology of Gled, from 2003 |
 | `docs/gledgui.md` | *Gled GUI*, a pictorial introduction to the GUI with a tutorial, from 2005 |
+| `docs/GledDevPlan.md` | the release and development plan from the gled.org wiki, 2010 |
+| `docs/GledBuild.md` | build notes for gled-builder on various distributions, from the gled.org wiki, 2013 |
 | `history/` | the ChangeLogs of the svn repository, and where the commit history is; see `history/README.md` |
 
 ## TADemo
