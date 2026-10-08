@@ -8,6 +8,8 @@ longer developed.
 | `TADemo/` | libset that loads and renders the unit models of the game Total Annihilation: the `.3do` piece hierarchy and the game's textures, with `demos/ta_init.C` |
 | `docs/gledarch.md` | *Architectural Elements of Gled*, a design document last edited around 2003, incomplete |
 | `docs/gled-dev.md` | *Somewhat urgent Gled developments*, a list of planned work from 2008 and 2009 |
+| `docs/gledparadigms.md` | *Gled System / Paradigms*, an introduction to the concepts and terminology of Gled, from 2003 |
+| `docs/gledgui.md` | *Gled GUI*, a pictorial introduction to the GUI with a tutorial, from 2005 |
 | `history/` | the ChangeLogs of the svn repository, and where the commit history is; see `history/README.md` |
 
 ## TADemo
