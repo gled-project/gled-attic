@@ -1,8 +1,5 @@
-// Simple scene with two Total Annihilation units.
-//
-// The unit models and textures are game data and are not in the repository.
-// Point ta_dir (or the environment variable TA_DATA) at a directory holding
-//   textures.dir, textures_8bitRGB/*.rgb and t1hpi/objects3d/*.3do
+// Two Total Annihilation units. The game data is not in the repository: ta_dir
+// or TA_DATA must hold textures.dir, textures_8bitRGB/ and t1hpi/objects3d/.
 //
 // vars: ZQueen* g_queen
 // libs: Geom1 TADemo
