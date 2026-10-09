@@ -13,9 +13,6 @@
 #include "sun_demos.C"
 #include "eye.C"
 
-#pragma cling load("libGeom1.so")
-#pragma cling load("libTADemo.so")
-
 using namespace gled;
 
 TA_Unit* ta_unit(Scene* s, TA_TextureContainer* tc, const TString& file)
